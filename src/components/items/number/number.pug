@@ -1,0 +1,23 @@
+mixin number(opition)
+    .number
+        img(src="img/fish.svg")
+        h2 Номера         
+        .number__main
+            img(src="img/" + opition.img, alt="Cat")
+            .number__condition
+                h3.number__title= option.title 
+                ul 
+                    li
+                    li
+                    li
+                +button()
+        .number__dots 
+            ul
+                li
+                li
+                li
+        .number__arrows 
+            a(href="#" class='number__arrow')
+            a(href="#" class='number__arrow')
+
++number()
