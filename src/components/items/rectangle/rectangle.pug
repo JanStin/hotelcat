@@ -1,0 +1,11 @@
+mixin rectangle(options)
+    .rectangle 
+        img(src="img/" + options.img, alt=options.title)
+        h3.rectangle__title= options.title 
+        p.font-family__text= options.text
+
++rectangle({
+    img: '0.svg',
+    title: 'Комфортная температура',
+    text: 'Во всех номерах поддерживается комфортная температура в пределах 23 - 25 градусов. В каждом номере можно дополнительно отрегулировать температуру.'
+})
