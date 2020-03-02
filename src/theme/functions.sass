@@ -5,4 +5,8 @@
 
 @function rem($size)
   $pixel: $size /16
-  @return $pixel + rem
+  @return $pixel + rem 
+
+@function line($size)
+  $pixel: $size / 16 * 1.4
+  @return $pixel + rem 
