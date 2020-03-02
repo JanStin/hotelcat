@@ -1,7 +1,5 @@
 import './theme/fonts.sass';
 import './theme/global.sass'
-import './test.sass'
-require('jquery-ui-bundle/jquery-ui.min.js');
 
 // Подключение всех SASS и js файлов из components
 function requireAll(requireContext) {

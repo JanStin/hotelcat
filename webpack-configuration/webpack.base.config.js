@@ -82,7 +82,6 @@ let config = {
                         options: {
                             resources: [
                                 `${PATHS.src}${PATHS.theme}variables.sass`,
-                                `${PATHS.src}${PATHS.theme}mixins.sass`,
                                 `${PATHS.src}${PATHS.theme}functions.sass`,
                             ],
                         }
@@ -132,8 +131,6 @@ let config = {
             "$" : 'jquery',
             "jQuery" : "jquery",
             "window.jQuery" : "jquery",
-            "pf" : "./pugFunctions"
-
         }),
 
         new CopyWebpackPlugin([
@@ -144,13 +141,6 @@ let config = {
             }
         ]),
 
-        new CopyWebpackPlugin([
-            {
-                from: `${PATHS.src}/theme/hotel-cards-photo`, to: `img/hotel-cards-photo`,
-                ignore: ['*js' , '*scss', '*pug', '*sass' ],
-                flatten:false
-            }
-        ]),
         new CopyWebpackPlugin([
             {
 
