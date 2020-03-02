@@ -1,0 +1,13 @@
+mixin button(options)
+    -
+        let color = '';
+        color += options.red ? 'button_red' : 'button_white';
+        let colorPets = '';
+        colorPets += options.red ? 'button__pets_white' : 'button__pets_red';
+    .button(class=color)
+        p.button__text Забронировать
+        .button__pets(class=colorPets)
+
+//- +button({
+//-     red: true
+//- })

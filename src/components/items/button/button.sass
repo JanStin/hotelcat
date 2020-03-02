@@ -1,0 +1,48 @@
+.button 
+    display: flex
+    align-items: center 
+    justify-content: space-between
+    width: rem(206)
+    height: rem(50)
+    border-radius: rem(25)
+    &_red
+        color: $white
+        background: $main-color
+
+    &_white
+        color: $color-title
+        background: $white
+
+    &__text
+        font-size: rem(16)
+        // line-height: rem(19)
+        padding-left: rem(30)
+        @media screen and ( max-width: 320px)
+            padding-left: rem(49)
+            
+
+    &__pets 
+        font-family: Material Icons
+        font-size: rem(26)
+        box-sizing: border-box 
+        margin-right: rem(7)
+        width: rem(36)
+        height: rem(36)
+        text-align: center 
+        border-radius: 50%
+        &::after
+            content: "pets"
+            position: relative
+            top: 4px
+        
+        &_red
+            background: $main-color
+            color: $white
+        &_white
+            background: $white
+            color: $main-color
+
+    @media screen and ( max-width: 320px)
+        width: rem(240)
+
+        
