@@ -1,23 +1,29 @@
-mixin number(opition)
+include ../button/button
+mixin number(options)
     .number
-        img(src="img/fish.svg")
+        img(src="img/fish.svg" class='number__fish')
         h2 Номера         
         .number__main
-            img(src="img/" + opition.img, alt="Cat")
+            img(src="img/" + options.img, alt="Cat" class='.number__photo')
             .number__condition
-                h3.number__title= option.title 
+                h3.number__title= options.title 
                 ul 
-                    li
-                    li
-                    li
-                +button()
+                    li.number__li= 'Площадь - ' + options.area + ' м2'
+                    li.number__li= 'Размеры (ШхГхВ) - ' + options.size + ' см' 
+                    li.number__li= 'Цена за сутки: ' + options.price + '₽'
+                +button({red:true})
         .number__dots 
-            ul
-                li
-                li
-                li
+            .number__dot.active fiber_manual_record
+            .number__dot fiber_manual_record
+            .number__dot fiber_manual_record
         .number__arrows 
-            a(href="#" class='number__arrow')
-            a(href="#" class='number__arrow')
+            a(href="#" class='number__arrow') keyboard_arrow_left
+            a(href="#" class='number__arrow') keyboard_arrow_right
 
-+number()
++number({
+    img: 'cat.svg',
+    title: 'Сьют',
+    area: '1,13',
+    size: '100x125x180',
+    price: '250'
+})

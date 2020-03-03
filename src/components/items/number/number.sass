@@ -1,0 +1,107 @@
+.number
+    width: rem(1030)
+    margin: rem(100) auto
+    display: flex
+    flex-direction: column
+    justify-content: center
+
+    > h2 
+        margin: 0 auto rem(70) auto
+
+    &__fish
+        position: absolute
+        opacity: 0.15
+        top: rem(109)
+        left: 0
+        z-index: -1
+        width: rem(484)
+
+    &__main 
+        display: flex
+        flex-direction: row
+        align-items: center
+        padding-bottom: rem(55)
+    // Окно параметров.
+    &__condition
+        z-index: 1
+        position: relative
+        left: -70px
+        display: flex
+        flex-direction: column 
+        background: $white
+        box-shadow: 0px 0px rem(25) rgba(208, 208, 208, 0.25)
+        border-radius: rem(8)
+        padding: rem(40) rem(100)
+        @media screen and ( max-width: 768px)
+            padding: rem(40)
+        @media screen and ( max-width:  340px)
+            padding: rem(25)
+        > ul
+            margin: rem(30) 0 rem(10) 0
+            @media screen and ( max-width:  768)
+                margin: rem(25) 0 rem(13) 0
+            > li
+                list-style-type: none
+                font-size: rem(16)
+                line-height: rem(19)
+                margin-bottom: rem(20)
+                @media screen and ( max-width: 768px)
+                    margin-bottom: rem(17)
+                    
+    &__title
+        font-size: rem(22)
+        line-height: rem(26)
+        @media screen and ( max-width: 768px)
+            font-size: rem(20)
+            line-height: rem(24)
+            
+    &__li
+        &::before
+            content: "fiber_manual_record"
+            font-family: 'Material Icons'
+            font-size: rem(13)
+            border-radius: 50%
+            color: $sub-color
+            margin: 0 8px 0 0 
+            @media screen and ( max-width: 768px)
+                font-size: rem(11)
+    // Картинка рядом с окном параметров
+    &__photo 
+        width: rem(600)
+        height: rem(404)
+        border-radius: 10px
+    
+    // Точки.
+    &__dots
+        display: flex
+        flex-direction: row
+        margin: 0 auto
+        > .active
+            color: $sub-color
+    &__dot 
+        font-family: 'Material Icons'
+        font-size: rem(12)
+        padding-right: rem(12)
+        color: #E1E1E1
+        cursor: pointer 
+        z-index: 1
+        
+
+    // Стрелочки.
+    &__arrows
+        position: relative
+        text-align: right
+        top: -24px
+    &__arrow 
+        text-decoration: none
+        font-family: 'Material Icons'
+        font-size: rem(36)
+        color: $main-color
+        width: rem(36)
+        border-radius: 50%
+        box-shadow: 0px 2px 12px rgba(173, 152, 143, 0.25)
+        background: $white
+        box-sizing: border-box
+        margin-left: rem(10)
+        cursor: pointer
+
