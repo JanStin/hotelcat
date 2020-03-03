@@ -21,6 +21,8 @@
         flex-direction: row
         align-items: center
         padding-bottom: rem(55)
+        > .hidden 
+            display: none
     // Окно параметров.
     &__condition
         z-index: 1
@@ -70,6 +72,7 @@
         width: rem(600)
         height: rem(404)
         border-radius: 10px
+
     
     // Точки.
     &__dots
@@ -81,7 +84,7 @@
     &__dot 
         font-family: 'Material Icons'
         font-size: rem(12)
-        padding-right: rem(12)
+        padding: 0 rem(6)
         color: #E1E1E1
         cursor: pointer 
         z-index: 1

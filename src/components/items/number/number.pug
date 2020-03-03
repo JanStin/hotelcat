@@ -4,7 +4,10 @@ mixin number(options)
         img(src="img/fish.svg" class='number__fish')
         h2 Номера         
         .number__main
-            img(src="img/" + options.img, alt="Cat" class='.number__photo')
+            
+            img(src="img/" + options.img[0], alt="Cat" class='number__photo' data-value='0')
+            img(src="img/" + options.img[1], alt="Cat" class='number__photo hidden' data-value='1')
+            img(src="img/" + options.img[2], alt="Cat" class='number__photo hidden' data-value='2')
             .number__condition
                 h3.number__title= options.title 
                 ul 
@@ -13,15 +16,15 @@ mixin number(options)
                     li.number__li= 'Цена за сутки: ' + options.price + '₽'
                 +button({red:true})
         .number__dots 
-            .number__dot.active fiber_manual_record
-            .number__dot fiber_manual_record
-            .number__dot fiber_manual_record
+            .number__dot.active(data-value='0') fiber_manual_record
+            .number__dot(data-value='1') fiber_manual_record
+            .number__dot(data-value='2') fiber_manual_record
         .number__arrows 
             a(href="#" class='number__arrow') keyboard_arrow_left
             a(href="#" class='number__arrow') keyboard_arrow_right
 
 +number({
-    img: 'cat.svg',
+    img: ['cat.svg', 'fish.svg', 'cat.svg'],
     title: 'Сьют',
     area: '1,13',
     size: '100x125x180',
