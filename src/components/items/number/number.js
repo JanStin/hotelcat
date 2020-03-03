@@ -1,9 +1,8 @@
 $(document).ready(function() {
-    
     $(".number__dot").click(function() {
         
         let dot = $(this);
-        let dots = dot.parent();
+        let dots = dot.parent().find('.number__dot');
         let parent = $(this).parents();
         let slides = parent.find('.number__photo');
 
@@ -13,6 +12,15 @@ $(document).ready(function() {
             slide.addClass('hidden');
             if(slide.data().value == active) {
                 slide.removeClass('hidden');
+            }
+        }
+
+        for (i = 0; i < dots.length; i++) {
+            dot = $(dots[i]);
+            if(dot.data().value != active) {
+                dot.removeClass('active');
+            } else {
+                dot.addClass('active');
             }
         }
     });
