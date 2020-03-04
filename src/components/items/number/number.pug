@@ -2,7 +2,7 @@ include ../button/button
 mixin number(options)
     .number
         img(src="img/fish.svg" class='number__fish')
-        h2 Номера         
+        h2= options.mainTitle         
         .number__main
             
             img(src="img/" + options.img[0], alt="Cat" class='number__photo' data-value='0')
@@ -24,6 +24,7 @@ mixin number(options)
             a(href="#" class='number__arrow') keyboard_arrow_right
 
 //- +number({
+//-     mainTitle: 'Номера'
 //-     img: ['cat.svg', 'fish.svg', 'cat.svg'],
 //-     title: 'Сьют',
 //-     area: '1,13',
