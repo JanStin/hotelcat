@@ -1,20 +1,33 @@
 .card
     width: rem(270)
+    box-sizing: border-box
+    border:  1px solid #e1e1e1
+    box-shadow: 0px 0px 25px rgba(208, 208, 208, 0.25)
+    border-radius: 6px
+    background: $white
     > img 
         width: rem(270)
         height: rem(185)
 
     &__main 
-        padding: rem(25) rem(20)
+        padding: rem(25) rem(0) rem(25) rem(20)
         h3 
             font-size: rem(24)
             font-weight: 500
             padding-bottom: rem(20)
-        p 
-            font-size: rem(13)
-            padding-bottom: rem(15)
-
+    &__text
+        font-size: rem(14)
+        padding-bottom: rem(15)
+    &___button
+        padding-top: rem(10)
 
     &__equipment
         display: flex 
         flex-direction: row
+    
+    &__icons
+        display: flex 
+        flex-direction: row
+        padding-left: rem(12)
+        > .equipment
+            padding-right: rem(8)

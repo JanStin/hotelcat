@@ -1,28 +1,31 @@
 include ../button/button
 include ../equipment/equipment
+
 mixin card(options)
     .card 
         img(src='img/' + options.img, alt="cat")
         .card__main
             h3= options.title
-            p= 'Размеры (ШхГхВ) - ' + options.size + ' см' 
-            p= 'Площадь - ' + options.area + ' м2'
+            .card__text= 'Размеры (ШхГхВ) - ' + options.size + ' см' 
+            .card__text= 'Площадь - ' + options.area + ' м2'
             .card__equipment
-                p Оснощение номера
-                -var x = options.equipment > 0 ? 1 : 0;
-                -for (; x <= options.equipment; x++)
-                    +equipment({value: x})
-            p Цена за сутки: 
+                .card__text Оснощение номера
+                .card__icons
+                    -var x = options.equipment > 0 ? 1 : 0;
+                    -for (; x <= options.equipment; x++)
+                        +equipment({value: x})
+            .card__text Цена за сутки: 
                 span= options.price
-            +button({red: true})
+            .card_button
+                +button({red: true})
 
 
 
-+card({
-    img: 'cat.svg',
-    price: 100,
-    title: 'Эконом',
-    area: '1,13',
-    size: '100x125x180',
-    equipment: 0
-})
+//- +card({
+//-     img: 'cat.svg',
+//-     price: 100,
+//-     title: 'Эконом',
+//-     area: '1,13',
+//-     size: '100x125x180',
+//-     equipment: 3
+//- })
