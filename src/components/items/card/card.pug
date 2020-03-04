@@ -16,7 +16,7 @@ mixin card(options)
                         +equipment({value: x})
             .card__text Цена за сутки: 
                 span= options.price
-            .card_button
+            .card__button
                 +button({red: true})
 
 
@@ -27,5 +27,5 @@ mixin card(options)
     title: 'Эконом',
     area: '1,13',
     size: '100x125x180',
-    equipment: 0
+    equipment: 4
 })

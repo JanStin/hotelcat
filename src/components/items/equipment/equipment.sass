@@ -1,6 +1,3 @@
-
-
-//The good stuff
 .equipment__tooltip-toggle
     cursor: pointer
     position: relative
@@ -13,39 +10,37 @@
     //Tooltip text container
     &::before 
         position: absolute
-        top: -65px
-        left: -80px
-        background-color: #2B222A
-        border-radius: 5px
-        color: #fff
-        content: attr(aria-label) //This pulls in the text from the element with the tooltip
-        padding: 1rem
+        top: -55px
+        left: -65px
+        background-color: $white
+        border-radius: 4px
+        box-shadow: 0px 2px 12px rgba(173, 152, 143, 0.18)
+        content: attr(aria-label)
+        padding: rem(10)
+        border: 1px solid $sub-color
         text-transform: none
         transition: all 0.5s ease
-        width: 160px
+        width: 125px
   
 
     //Tooltip arrow
     &::after 
         position: absolute
-        top: -12px
-        left: 9px
-        border-left: 5px solid transparent
-        border-right: 5px solid transparent
-        border-top: 5px solid #2B222A
+        top: -20px
+        left: -3px
+        background: $white
+        border-left: 15px solid transparent
+        border-right: 15px solid transparent
+        border-top: 15px solid $sub-color
         content: " "
-        font-size: 0
-        line-height: 0
         margin-left: -5px
-        width: 0
   
   
     //Setting up the transition
     &::before,
     &::after 
-        color: #efefef
-        font-family: monospace
-        font-size: 16px
+        font-size: 12px
+        line-height: 14px
         opacity: 0
         pointer-events: none
         text-align: center

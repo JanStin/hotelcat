@@ -4,27 +4,18 @@ mixin equipment(options)
             when 0 
                 .equipment__tooltip-toggle(aria-label="Пустой номер")
                     img(src="img/equipment-" + options.value + ".svg", alt="Пустой номер")
-
-            //- when 1 
-            //-     .equipment__con-tooltip
-            //-         img(src="img/equipment-" + options.value + ".svg", alt="Лежак")
-            //-         .equipment__tooltip
-            //-             p Лежак
-            //- when 2 
-            //-     .equipment__con-tooltip
-            //-         img(src="img/equipment-" + options.value + ".svg", alt="Домик")
-            //-         .equipment__tooltip
-            //-             p Домик
-            //- when 3 
-            //-     .equipment__con-tooltip
-            //-         img(src="img/equipment-" + options.value + ".svg", alt="Игровой комплекс")
-            //-         .equipment__tooltip
-            //-             p Игровой комплекс
-            //- when 4 
-            //-     .equipment__con-tooltip
-            //-         img(src="img/equipment-" + options.value + ".svg", alt="Когтеточка")
-            //-         .equipment__tooltip
-            //-             p Когтеточка
+            when 1 
+                .equipment__tooltip-toggle(aria-label="Лежак")
+                    img(src="img/equipment-" + options.value + ".svg", alt="Лежак")
+            when 2 
+                .equipment__tooltip-toggle(aria-label="Домик")
+                    img(src="img/equipment-" + options.value + ".svg", alt="Домик")
+            when 3 
+                .equipment__tooltip-toggle(aria-label="Игровой комплекс")
+                    img(src="img/equipment-" + options.value + ".svg", alt="Игровой комплекс")
+            when 4 
+                .equipment__tooltip-toggle(aria-label="Когтеточка")
+                    img(src="img/equipment-" + options.value + ".svg", alt="Когтеточка")
 
 //- +equipment({
 //-     value: 4
