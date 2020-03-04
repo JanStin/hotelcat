@@ -1,25 +1,28 @@
 .equipment
-    max-width: rem(16)
+    // max-width: rem(16)
     &__con-tooltip
         position: relative
+        // display: inline-block
     
     &__tooltip
         visibility: hidden
         z-index: 1
         opacity: .40
-        padding: 0px 10px
-        text-align: center
+        padding: 10px 10px
+        // width: rem(125)
+        text-align: center//
         background: $white
         color: $color-title
         position: absolute
-        top:-210%
-        left: -15%
+        top: -300%
+        left: -25%
         border: 1px solid $sub-color 
         border-radius: 3px
-        font: 16px
+        font: 12px
         box-shadow: 0px 4px 12px rgba(173, 152, 143, 0.18)
         &::after
             content: ""
+            margin-top: 10px
             width: 0
             height: 0        
             border-style: solid
