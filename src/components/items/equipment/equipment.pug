@@ -1,0 +1,44 @@
+mixin equipment(options)
+    .equipment
+        case options.value 
+            when 0 
+                .equipment__con-tooltip
+                    img(src="img/equipment-" + options.value + ".svg", alt="Пустой номер")
+                    .equipment__tooltip
+                        p Пустой номер
+            when 1 
+                .equipment__con-tooltip
+                    img(src="img/equipment-" + options.value + ".svg", alt="Лежак")
+                    .equipment__tooltip
+                        p Лежак
+            when 2 
+                .equipment__con-tooltip
+                    img(src="img/equipment-" + options.value + ".svg", alt="Домик")
+                    .equipment__tooltip
+                        p Домик
+            when 3 
+                .equipment__con-tooltip
+                    img(src="img/equipment-" + options.value + ".svg", alt="Игровой комплекс")
+                    .equipment__tooltip
+                        p Игровой комплекс
+            when 4 
+                .equipment__con-tooltip
+                    img(src="img/equipment-" + options.value + ".svg", alt="Когтеточка")
+                    .equipment__tooltip
+                        p Когтеточка
+
+//- +equipment({
+//-     value: 4
+//- })
+//- +equipment({ 
+//-     value: 1
+//- })
+//- +equipment({
+//-     value: 2
+//- })
+//- +equipment({
+//-     value: 3
+//- })
+//- +equipment({
+//-     value: 0
+//- })
