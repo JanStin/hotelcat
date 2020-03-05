@@ -1,0 +1,26 @@
+.slide-show 
+    display: grid 
+    grid-auto-columns: 100px 500px
+    grid-auto-rows: repeat(3, 132px)
+    grid-template-areas: 'one main' 'two main' 'three main'
+
+    &__main 
+        grid-area: main
+        width: rem(500)
+        height: rem(396)
+        border-radius: 8px
+
+    &__additional
+        border-radius: 4px
+        cursor: pointer
+        opacity: 0.5
+        width: rem(70)
+        height: rem(112)
+        margin-right: rem(30)
+        &_one
+            grid-area: one
+        &_two
+            grid-area: two
+            margin: rem(30) 0
+        &_three
+            grid-area: three
