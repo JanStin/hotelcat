@@ -12,6 +12,6 @@ $(document).ready(() => {
         additionalImage.removeClass();
     
         mainImage.addClass(additionalImageClass);        
-        additionalImage.addClass('slide-show__main');
+        additionalImage.addClass('slide-show__main slide-show__js');
     });
 });

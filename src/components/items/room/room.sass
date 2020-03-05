@@ -1,0 +1,32 @@
+.room
+    display: flex
+    flex-direction: row
+    margin: 0 auto
+
+    &__text
+        font-size: 16px
+        line-height: 19px
+
+    &__info 
+        display: flex
+        flex-direction: column 
+        margin: 0 auto 0 rem(70)
+
+        > p 
+            padding-bottom: 15px
+
+        > h1
+            padding-bottom: rem(40)
+
+    &__equipment
+        display: flex
+        flex-direction: row
+        align-items: center
+        margin-bottom: 10px
+        > p 
+            margin-left: 8px
+
+    &__paw
+        position: absolute
+        right: -80px
+        transform: matrix(0.71, 0.71, 0.71, -0.71, 0, 0)

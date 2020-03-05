@@ -1,0 +1,32 @@
+include ../slide-show/slide-show
+include ../equipment/equipment
+include ../button/button
+mixin room(options)
+    .room 
+        img(src="img/paw.svg", class="room__paw")
+        +slide-show({
+            img: options.img
+        })
+        .room__info 
+            h1= options.title
+            p.room__text= 'Размеры (ШхГхВ) - ' + options.size + ' см' 
+            p.room__text= 'Площадь - ' + options.area + ' м2'
+            p.room__text Оснащение номера
+                -var name = ['Пустой номер', "Лежак", "Домик", "Игровой комплекс - 3 яруса", "Когтеточка"]
+                -var x = options.equipment > 0 ? 1 : 0;
+                -for (; x <= options.equipment; x++)
+                    .room__equipment
+                        +equipment({value: x})
+                        p.room__text= name[x]
+            p.room__text= 'Цена за сутки: ' + options.price + '₽'
+            +button({red: true})
+
+
++room({
+    img: ['Rectangle 52.jpg', 'Rectangle 53.jpg', 'Rectangle 54.jpg', 'Rectangle 55.jpg'],
+    title: 'Супер-люкс',
+    area: '2,88',
+    size: '180x160x180',
+    price: '600',
+    equipment: 4
+})
