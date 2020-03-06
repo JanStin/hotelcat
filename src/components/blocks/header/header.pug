@@ -1,0 +1,16 @@
+include menu/menu
+
+mixin header()
+    header
+        +menu()
+        .header
+            .header__logo 
+                img(src="img/logo.svg", alt="logo")
+            .header__nav 
+                nav 
+                    a(href="#").header__li Почему мы? 
+                    a(href="#").header__li Номера
+                    a(href="#").header__li Отзывы
+                    a(href="#").header__li Как нас найти
+
+//- +header()

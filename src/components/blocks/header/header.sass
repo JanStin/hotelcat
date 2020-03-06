@@ -1,0 +1,24 @@
+.header
+    display: flex
+    flex-flow: row nowrap
+    align-items: center
+    justify-content: space-between
+    @media screen and ( max-width:  677px)
+        display: none
+        
+    
+    &__logo, &__nav
+        margin: 12px 70px 12px 100px
+        @media screen and ( max-width:  1030px)            
+            margin: 12px 45px 12px 45px
+
+    &__logo
+        width: 63px
+        height: 52px
+
+    &__nav
+        display: flex
+        flex-direction: row
+        // justify-content: space-between
+    &__li
+        padding: 0 30px 0 0
