@@ -4,9 +4,12 @@
     grid-rows: repeat(3, 132px)
     grid-template-areas: 'one main' 'two main' 'three main'
     @media screen and ( max-width:  1030px)
-        grid-columns: repeat(3, 118px)
+        grid-template-columns: repeat(3, 118px)
         grid-rows: 288px 93px
         grid-template-areas: 'main main main' 'one two three'
+    @media screen and ( max-width:  730px)
+        grid-template-columns: repeat(3, 97px)
+        grid-rows: 288px 80px
         
 
     &__main 
@@ -17,6 +20,8 @@
         @media screen and ( max-width:  1030px)
             width: rem(354)
             height: rem(288)
+        @media screen and ( max-width:  730px)
+            width: rem(290)
 
     &__additional
         border-radius: 4px
@@ -30,17 +35,23 @@
             height: rem(78)
             margin-right: 0
             margin-top: rem(21)
+            align-self: end
+        @media screen and ( max-width:  730px)
+            width: rem(86)
+            height: rem(64)
+            margin-top: rem(16)
 
         &_one
             grid-area: one
-            @media screen and ( max-width:  1030px)
-                margin: auto auto 0 auto
+
         &_two
             grid-area: two
-            margin: rem(30) 0
+            align-self: center
             @media screen and ( max-width:  1030px)
-                margin: auto rem(21) 0 rem(21)
+                justify-self: center
+
         &_three
             grid-area: three
+            align-self: end
             @media screen and ( max-width:  1030px)
-                margin: auto auto 0 auto
+                justify-self: end
