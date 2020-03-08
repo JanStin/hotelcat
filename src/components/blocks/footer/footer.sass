@@ -1,0 +1,68 @@
+.footer
+
+    &__top, &__bottom
+        display: flex
+        flex-direction: row
+        align-items: center
+
+    &__top
+        justify-content: space-between
+        flex-wrap: wrap
+        max-width: rem(966)
+        padding: rem(12)
+        margin: 0 auto
+        @media screen and ( max-width:  1030px)
+            max-width: rem(624)
+            padding: rem(12) rem(20)
+        @media screen and ( max-width: 540px)
+            flex-direction: column
+            align-items: flex-start
+
+    &__nav
+        display: flex
+        flex-direction: row
+
+    &__one
+        display: flex
+        flex-direction: row
+        @media screen and ( max-width: 540px)
+            flex-direction: column
+            margin: rem(20) rem(40) rem(10) 0
+            
+        
+
+    &__li
+        margin-left: rem(30)
+        font-size: 16px
+        line-height: 19px
+        font-weight: 600
+        font-size: normal
+        @media screen and ( max-width: 540px)
+            margin-left: 0
+            padding-bottom: 20px
+
+
+    &__logo
+        width: 63px
+        height: 52px
+            
+
+    &__bottom 
+        justify-content: space-between
+        flex-wrap: wrap
+        max-width: rem(966)
+        padding: rem(20)
+        margin: 0 auto
+        color: #8F8F8F
+        font-size: rem(12)
+        line-height: rem(14)
+        @media screen and ( max-width:  1030px)
+            max-width: rem(624)
+            
+
+footer 
+    > br 
+        background: #8F8F8F
+        color: #8F8F8F
+        height: 1px
+        border: none
