@@ -1,0 +1,65 @@
+.form 
+    max-width: 570px
+    box-sizing: border-box
+    display: flex
+    flex-direction: column
+    align-items: center 
+    background: #FFFEFD
+    box-shadow: 0px 0px 25px rgba(208, 208, 208, 0.25)
+    border-radius: 10px
+    padding: rem(70)
+    margin: auto
+    position: relative
+    @media screen and ( max-width: 540px)
+        padding: rem(60) rem(15)
+        
+
+    > h2 
+        font-weight: bold
+        font-size: 28px
+        line-height: 33px
+        margin-bottom: rem(50)
+        text-align: center
+        @media screen and ( max-width: 540px)
+            font-size: 24px
+            line-height: 28px
+            margin-bottom: rem(40)
+            
+
+
+    > .input 
+        margin-bottom: rem(20)
+
+    &__paw 
+        position: absolute 
+        width: 137px
+        height: 117px
+        top: -30px
+        left: -30px
+        transform: matrix(0.82, -0.57, -0.57, -0.82, 0, 0)
+
+    &__calendar
+        display: flex
+        flex-direction: row
+        flex-wrap: wrap
+        justify-content: space-between
+        align-items: center
+        width: 100%
+        margin-bottom: rem(50)
+        @media screen and ( max-width: 540px)
+            margin-bottom: rem(35)
+
+        > .input 
+            max-width: 130px
+            &::-webkit-input-placeholder 
+                color: #B5B5B5
+
+    &__text
+        color:$color-title
+        font-size: 16px
+        line-height: 19px
+        &_first
+            @media screen and ( max-width: 540px)
+                flex-basis: 100%
+                padding-bottom: 15px
+                text-align: center

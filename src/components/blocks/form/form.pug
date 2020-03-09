@@ -1,0 +1,42 @@
+include ../../items/input/input
+include ../../items/button/button
+mixin form()
+    .form 
+        img(src="img/paw.svg" class="form__paw")
+        h2 Забронировать номер
+        +input({ type: 'text', text: 'Ваше имя'})
+        +input({ type: 'text', text: 'Имя Питомца'})
+        +input({ type: 'tel', text: 'Телефон'})
+        +input({ type: 'email', text: 'E-mail'})
+        .form__calendar 
+            -
+                function formatDate(date) {
+                    var dd = date.getDate();
+                    if (dd < 10) dd = '0' + dd;
+                    var mm = date.getMonth() + 1;
+                    if (mm < 10) mm = '0' + mm;
+                    var yy = date.getFullYear();
+                    if (yy < 10) yy = '0' + yy;
+                    return dd + '.' + mm + '.' + yy;
+                }
+                function formatDateTwo(date) {
+                    date.setDate(date.getDate() + 5)
+                    var dd = date.getDate();
+                    if (dd < 10) dd = '0' + dd;
+                    var mm = date.getMonth() + 1;
+                    if (mm < 10) mm = '0' + mm;
+                    var yy = date.getFullYear();
+                    if (yy < 10) yy = '0' + yy;
+                    return dd + '.' + mm + '.' + yy;
+                }
+                var data = new Date();
+                dataFrom = formatDate(data);
+                dataTo = formatDateTwo(data);
+            .form__text.form__text_first Дата заезда
+            .form__text с
+            +input({ type: 'data', text: dataFrom})
+            .form__text по 
+            +input({ type: 'data', text: dataTo})
+        +button({red: true})
+
++form()
