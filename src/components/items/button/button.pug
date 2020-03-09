@@ -4,8 +4,9 @@ mixin button(options)
         color += options.red ? 'button_red' : 'button_white';
         let colorPets = '';
         colorPets += options.red ? 'button__pets_white' : 'button__pets_red';
+        options.text = options.text ? options.text : 'Забронировать'
     .button(class=color)
-        p.button__text Забронировать
+        p.button__text= options.text
         .button__pets(class=colorPets)
 
 //- +button({
