@@ -1,5 +1,6 @@
 include ../../items/input/input
 include ../../items/button/button
+//- include booking/booking
 mixin form()
     #overlay
         .form 
@@ -39,6 +40,8 @@ mixin form()
                 +input({ type: 'data', text: dataFrom})
                 .form__text по 
                 +input({ type: 'data', text: dataTo})
-            +button({red: true, text: 'Отправить заявку'})
+            .form__book
+                +button({red: true, text: 'Отправить заявку'})
+        .booking
 
-+form()
+//- +form()
