@@ -1,0 +1,7 @@
+mixin filter-button(options)
+    -
+        let color = '';
+        color += options.yellow ? 'filter-button_yellow' : 'filter-button_white';
+        options.text = options.text ? options.text : 'Забронировать'
+    .filter-button(class=color)
+        p.filter-button__text= options.text

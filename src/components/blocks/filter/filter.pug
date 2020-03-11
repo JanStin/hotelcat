@@ -1,0 +1,22 @@
+include checkbox/checkbox 
+include filter-button/filter-button 
+
+mixin filter()
+    -
+        var value = ['0,63', '0,90', '1,13', '1,56', '2,56', '2,88']
+        var text = ['Пустой номер', 'Лежак', 'Когтеточка', 'Игровой-комплекс', 'Домик']
+    .filter 
+        .filter__text Цена за сутки, ₽
+        .filter__sale 
+            input(type="number" placeholder=" от 100")
+            input(type="number" placeholder=" до 600")
+        .filter__text Площадь
+        - for(var i = 0; i < value.length; i++)
+            +checkbox({text: value[i] + ' м2'})
+        .filter__text Оснащение номера
+        - for(var i = 0; i < text.length; i++)
+            +checkbox({text: text[i]})
+        +filter-button({yellow: true, text: 'Применить'})
+        +filter-button({yellow: false, text: 'Сбросить фильтр'})
+
+//- +filter()

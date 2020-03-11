@@ -1,0 +1,44 @@
+.option-input 
+    -webkit-appearance: none
+    -moz-appearance: none
+    -ms-appearance: none
+    -o-appearance: none
+    appearance: none
+    position: relative
+    height: 20px
+    width: 20px
+    transition: all 0.15s ease-out 0s
+    background: $white
+    border: none
+    color: $color-title
+    cursor: pointer
+    display: inline-block
+    margin-right: 10px
+    outline: none
+    position: relative
+    z-index: 1000
+    border: 1px solid #E1E1E1
+    box-sizing: border-box
+
+.option-input:hover 
+    background: $white
+
+.option-input:checked::before 
+    height: 20px
+    width: 20px
+    position: absolute
+    content: '✔'
+    top: -1px
+    left: -1px
+    display: inline-block
+    font-size: 14px
+    text-align: center
+    line-height: 20px
+
+.label 
+    display: flex
+    flex-direction: row
+    align-items: center
+    &__text 
+        font-size: 14px
+        line-height: 17px
