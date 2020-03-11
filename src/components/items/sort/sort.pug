@@ -1,8 +1,10 @@
 mixin sort()
-    .sort
-        .sort__text.sort__main ↑ По площади
-        .sort__text ↓ По площади
-        .sort__text ↑ По цене
-        .sort__text ↓ По цене
+    .sort.sort__button 
+        .sort__main
+            .sort__text ↑ По площади
+            .sort__arrow keyboard_arrow_down
+        .sort__text.sort__none.sort__li ↓ По площади
+        .sort__text.sort__none.sort__li ↑ По цене
+        .sort__text.sort__none.sort__li ↓ По цене
 
-+sort()
+//- +sort()
