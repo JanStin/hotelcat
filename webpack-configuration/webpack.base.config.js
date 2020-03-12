@@ -4,6 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const webpack = require('webpack');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const fs = require('fs');
+// import "~bootstrap/bootstrap.min.css"
 
 
 
@@ -128,7 +129,11 @@ let config = {
         }),
 
         new webpack.ProvidePlugin({
-            "$" : 'jquery',
+            $: 'jquery',
+            jQuery: 'jquery',
+            'window.jQuery': 'jquery',
+            'Popper': 'popper.js',
+            "Bootstrap": "bootstrap.js"
         }),
 
         new CopyWebpackPlugin([

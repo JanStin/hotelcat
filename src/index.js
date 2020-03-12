@@ -1,5 +1,22 @@
 import './theme/fonts.sass';
-import './theme/global.sass'
+import './theme/global.sass';
+// import jQuery from "jquery";
+// import popper from 'popper.js';
+// import bootstrap from 'bootstrap';
+// import owlCarousel from "owl.carousel";
+// import "bootstrap/dist/js/bootstrap.bundle.min.js";
+// import 'owl.carousel';
+// import 'bootstrap/dist/css/bootstrap.css';
+// require ('bootstrap/dist/js/bootstrap.min.js');
+// require ('bootstrap/dist/css/bootstrap.css');
+// import popper from 'popper.js';
+// import bootstrap from 'bootstrap';
+// require ''
+// import 'bootstrap';
+// import 'owl.carousel/dist/assets/owl.carousel.css';
+import 'owl.carousel';
+// require('owl.carousel/dist/owl.carousel');
+
 
 // Подключение всех SASS и js файлов из components
 function requireAll(requireContext) {
