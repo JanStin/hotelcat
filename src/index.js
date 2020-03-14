@@ -1,3 +1,5 @@
+// import 'owl.carousel/dist/assets/owl.carousel.css';
+import 'owl.carousel';
 import './theme/fonts.sass';
 import './theme/global.sass';
 // import jQuery from "jquery";
@@ -13,8 +15,7 @@ import './theme/global.sass';
 // import bootstrap from 'bootstrap';
 // require ''
 // import 'bootstrap';
-// import 'owl.carousel/dist/assets/owl.carousel.css';
-import 'owl.carousel';
+
 // require('owl.carousel/dist/owl.carousel');
 
 

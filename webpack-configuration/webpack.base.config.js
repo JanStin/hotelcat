@@ -99,7 +99,7 @@ let config = {
             },
 
             {
-                test: /\.(img|jpe?g|gif|svg)?$/,
+                test: /\.(img|jpe?g|gif|png|svg)?$/,
                 loader: 'file-loader',
                 options: {
                     name: `[name].[ext]`,
