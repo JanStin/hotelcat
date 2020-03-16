@@ -1,0 +1,55 @@
+.search
+    display: flex
+    flex-flow: column nowrap
+    align-items: center
+
+    &__top
+        display: flex
+        flex-flow: row wrap
+        justify-content: space-between
+        align-items: center
+        width: 87%
+        @media screen and ( max-width:  640px)
+            width: 95%
+            flex-flow: column
+
+        > h1            
+            flex-basis: 60%
+            font-size: 36px
+            line-height: 43px
+
+    &__content
+        width: 87%
+        display: flex
+        flex-flow: row nowrap
+        align-items: start
+        @media screen and ( max-width:  640px)
+            flex-flow: column nowrap
+            align-items: center
+            
+
+        > .filter
+            min-width: 300px        
+            @media screen and ( max-width:  640px)
+                min-width: 210px
+
+    &__cards 
+        display: flex
+        flex-flow: row wrap
+        > .card 
+            margin: 30px auto
+
+
+    > .mapblock
+        align-self: stretch
+
+    &__promotion
+        width: 1000px
+        margin: rem(120) auto
+        @media screen and ( max-width:  1030px)
+            width: 700px
+        @media screen and ( max-width:  730px)
+            width: 540px
+        @media screen and ( max-width:  541px)
+            width: 310px
+            

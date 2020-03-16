@@ -1,9 +1,11 @@
 include ../../items/number/number
 include ../../items/room/room
 include ../../items/mapblock/mapblock
+include ../../blocks/form/form
 
 mixin rooms()
     main.rooms 
+        +form()
         +room({
             img: ['Rectangle 52.jpg', 'Rectangle 53.jpg', 'Rectangle 54.jpg', 'Rectangle 55.jpg'],
             title: 'Супер-люкс',

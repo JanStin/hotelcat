@@ -1,0 +1,28 @@
+include ../../items/mapblock/mapblock
+include ../../items/sort/sort
+include ../../items/card/card
+include ../../blocks/form/form
+include ../../blocks/filter/filter
+include ../../blocks/promotion/promotion
+
+mixin search()
+    main.search 
+        +form()
+        .search__top 
+            h1 Наши номера
+            +sort()
+        .search__content 
+            +filter()
+            .search__cards 
+                -for(var i = 0; i < 6; i++)
+                    +card({
+                        img: 'cat.svg',
+                        price: 100,
+                        title: 'Эконом',
+                        area: '1,13',
+                        size: '100x125x180',
+                        equipment: 4
+                    })
+        .search__promotion
+            +promotion()
+        +mapblock()
