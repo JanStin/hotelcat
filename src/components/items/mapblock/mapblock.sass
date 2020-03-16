@@ -1,14 +1,22 @@
 .mapblock
     display: flex 
     flex-direction: row
+    @media screen and ( max-width:  730px)
+        flex-direction: column
+        
     &__info 
         background: $sub-color
         min-width: rem(260)
         padding: rem(70) rem(110) rem(70) rem(200)
+        @media screen and ( max-width:  1030px)
+            padding: rem(50) rem(45)
+        @media screen and ( max-width:  730px)
+            padding: rem(30) rem(15) !important
+
         > h2 
             font-weight: bold
             padding-bottom: rem(50)
-            font-size: rem(25)
+            font-size: rem(25) 
     &__li 
         font-size: rem(14)
         padding-bottom: 35px
@@ -23,3 +31,6 @@
 
     &__map
         width: 100%
+
+    iframe
+        min-height: 500px

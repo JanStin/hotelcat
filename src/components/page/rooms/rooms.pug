@@ -1,0 +1,25 @@
+include ../../items/number/number
+include ../../items/room/room
+include ../../items/mapblock/mapblock
+
+mixin rooms()
+    main.rooms 
+        +room({
+            img: ['Rectangle 6.jpg', 'Rectangle 3.jpg', 'Rectangle 5.jpg', 'Rectangle 1.jpg'],
+            title: 'Супер-люкс',
+            area: '2,88',
+            size: '180x160x180',
+            price: '600',
+            equipment: 4
+        })
+
+        +number({
+            mainTitle: 'Другие номера',
+            img: ['cat.svg', 'fish.svg', 'cat.svg'],
+            title: 'Сьют',
+            area: '1,13',
+            size: '100x125x180',
+            price: '250'
+        })
+
+        +mapblock()

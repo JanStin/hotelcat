@@ -1,5 +1,6 @@
 // TODO доделать адаптив.
 .number
+    position: relative
     width: rem(1030)
     margin: rem(100) auto
     display: flex
@@ -8,6 +9,9 @@
     @media screen and ( max-width:  1030px)
         width: rem(768)
         margin: rem(80) auto 
+    @media screen and ( max-width:  730px)
+        width: rem(320)
+        margin: rem(80) auto        
         
     > h2 
         font-size: rem(36)
@@ -15,7 +19,7 @@
         margin: 0 auto rem(70) auto
         @media screen and ( max-width:  1030px)
             margin: 0 auto rem(60) auto
-        @media screen and ( max-width:  320px)
+        @media screen and ( max-width:  730px)
             margin: 0 auto rem(40) auto
             font-size: rem(22)
             line-height: rem(33)
@@ -24,8 +28,8 @@
     &__fish
         position: absolute
         opacity: 0.15
-        top: rem(109)
-        left: 0
+        top: 0%
+        left: -10%
         z-index: -1
         width: rem(484)
         @media screen and ( max-width:  1030px)
@@ -36,6 +40,9 @@
         flex-direction: row
         align-items: center
         padding-bottom: rem(55)
+        @media screen and ( max-width:  730px)
+            flex-direction: column 
+
         > .hidden 
             display: none
     // Окно параметров.
@@ -52,8 +59,10 @@
         @media screen and ( max-width: 1030px)
             left: -90px
             padding: rem(30) rem(10) rem(30) rem(30)
-        @media screen and ( max-width:  340px)
+        @media screen and ( max-width:  730px)
             padding: rem(25)
+            position: static
+            align-items: center
         > ul
             margin: rem(30) 0 rem(10) 0
             @media screen and ( max-width:  1030px)
@@ -91,7 +100,11 @@
         height: rem(404)
         border-radius: 10px
         @media screen and ( max-width:  1030px)
-            width: (442)
+            width: rem(442)
+            height: rem(326)
+        @media screen and ( max-width:  730px)
+            min-width: rem(310)
+            width: 100%
             height: rem(326)
             
 
