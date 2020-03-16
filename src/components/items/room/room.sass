@@ -3,7 +3,7 @@
     flex-direction: row
     // max-width: rem(1000)
     // margin: 0 auto
-    
+    position: relative
     @media screen and ( max-width:  730px)
         flex-direction: column
         justify-content: center 
@@ -38,7 +38,8 @@
 
     &__paw
         position: absolute
-        right: -80px
+        right: 0px
+
         transform: matrix(0.71, 0.71, 0.71, -0.71, 0, 0)
         @media screen and ( max-width:  730px)
             display: none
