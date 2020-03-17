@@ -3,7 +3,8 @@ include ../equipment/equipment
 
 mixin card(options)
     .card 
-        img(src='img/' + options.img, alt="cat")
+        a(href="room.html")
+            img(src='img/' + options.img, alt="cat")
         .card__main
             h3= options.title
             .card__text= 'Размеры (ШхГхВ) - ' + options.size + ' см' 

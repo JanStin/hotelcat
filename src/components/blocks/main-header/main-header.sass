@@ -1,0 +1,54 @@
+.main-header
+    position: relative
+    background-image: url(img/main-cat.jpg)
+    background-size: 100% 100%
+    background-repeat: no-repeat
+    width: 100%
+    @media screen and ( max-width:  540px)
+        background-image: url(img/main-cat-v.jpg)
+        
+
+
+
+    &__text 
+        font-size: rem(20)
+        line-height: line(24)
+        @media screen and ( max-width:  540px)
+            font-size: rem(16)
+            line-height: line(19)
+        
+        &_small
+            font-size: rem(14)
+            line-height: line(17)
+            margin-top: 150px
+            @media screen and ( max-width:  540px)
+                margin-top: 50px
+                font-size: rem(12)
+                line-height: line(14)
+
+    &__content
+        display: flex 
+        flex-direction: column
+        margin: 0 auto
+        width: 320px
+        
+        padding-right: 500px 
+        @media screen and ( max-width:  1030px)
+            margin: 0 auto 0 50px
+            padding-right: 0 
+        @media screen and ( max-width:  540px)
+            align-items: center 
+            margin: 0 auto !important       
+
+        
+        > h1 
+            font-size: 56px
+            line-height: 66px
+            @media screen and ( max-width:  540px) 
+                font-size: 44px
+                line-height: 52px
+
+        > .button
+            margin: 40px 0 100px 0
+            @media screen and ( max-width:  540px)
+                margin: 40px 0 230px 0
