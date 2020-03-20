@@ -14,14 +14,19 @@ mixin search()
         .search__content 
             +filter()
             .search__cards 
+                - var equipment = [0,2,3,3,4,4]
+                - var title = ['Эконом', 'Эконом плюс', 'Комфорт', 'Сьют', 'Люкс', 'Супер-Люкс']
+                - var area = ['0,63','0,90','1,13','1,56','2,56','2,88']
+                - var size = ['90x75x180', '90x100x180', '100x125x180', '125x125x180', '160x160x180','180x160x180']
+                - var price = [100, 200, 250, 350, 500, 600]
                 -for(var i = 0; i < 6; i++)
                     +card({
                         img: 'Rectangle '+ (i + 4) + '.jpg',
-                        price: 100,
-                        title: 'Эконом',
-                        area: '1,13',
-                        size: '100x125x180',
-                        equipment: 4
+                        price: price[i],
+                        title: title[i],
+                        area: area[i],
+                        size: size[i],
+                        equipment: equipment[i]
                     })
         .search__promotion
             +promotion()
