@@ -2,8 +2,9 @@ $(document).ready(function() {
 
     // Сборка/выпадение списка.
     $(".sort").click(function() {
-        $(this).toggleClass("sort__button");;
-        $(this).find('.sort__li').toggleClass('sort__none')
+        let thisClick =  $(this);
+        thisClick.toggleClass("sort__drop");
+        thisClick.find('.sort__list').toggleClass('sort__none');
     });
 
     $('.sort__text').click(function() {

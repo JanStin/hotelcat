@@ -132,8 +132,6 @@ let config = {
             $: 'jquery',
             jQuery: 'jquery',
             'window.jQuery': 'jquery',
-            'Popper': 'popper.js',
-            "Bootstrap": "bootstrap.js"
         }),
 
         new CopyWebpackPlugin([

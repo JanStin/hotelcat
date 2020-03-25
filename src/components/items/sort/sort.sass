@@ -3,16 +3,17 @@
     background: $white
     padding: rem(12) rem(20)
     box-shadow: 0px 2px 12px rgba(173, 152, 143, 0.18)
-    border-radius: 4px
+    border-radius: 4px        
+    border-radius: 25px 
     cursor: pointer
+    position: relative
+    
 
-    &__none 
-        display: none
+    &__drop 
+        border-bottom-left-radius: 0px
+        border-bottom-right-radius: 0px
+        box-shadow: 0px 2px 12px rgba(173, 152, 143, 0.18)
 
-    &__button 
-        height: 35px
-        border-radius: 25px 
-        padding: rem(22) rem(20) 0 rem(20)
 
     &__main 
         display: flex
@@ -23,13 +24,32 @@
     &__text
         font-size: 14px
         line-height: 17px
-        margin-bottom: 25px
+
 
     &__arrow
         font-family: Material Icons
         font-style: normal
         font-weight: normal
-        height: 45px
-        width: 24px
-        font-size:  rem(24)
+        font-size:  rem(28)
         
+    &__li 
+        padding: rem(12) rem(20)
+        
+    &__list
+        display: flex
+        flex-direction: column
+        justify-content: flex-start
+        align-content: center
+        background: $white
+        z-index: 1
+        position: absolute
+        padding-top:4px
+        left: 0
+        box-shadow: 0 10px 20px rgba(31, 32, 65, 0.05)
+        width: 214px
+        box-shadow: 0px 2px 12px rgba(173, 152, 143, 0.18)
+        border-bottom-left-radius: 25px
+        border-bottom-right-radius: 25px
+
+    &__none 
+        display: none
