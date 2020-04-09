@@ -1,6 +1,6 @@
 $(document).ready(() => {
     $('.form__book').click(function() {
-        let text = `<div class="form"> <img class="form__paw" src="img/paw.svg">
+        let text = `<div class="form"> <img class="form__paw" src="img/paw.svg" alt="vector_paw">
             <div class="form__clear">clear</div>
             <div class="booking__title">Спасибо за заявку! </div>
             <div class="form__text">Мы свяжимся с вами в ближайшее время</div>

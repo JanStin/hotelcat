@@ -1,5 +1,6 @@
 # Игнорировать папку node_modules
 /node_modules/*
+/dist/*
 
 # Игнорировать vs code
 .vscode/*
